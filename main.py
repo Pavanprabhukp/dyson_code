@@ -22,3 +22,4 @@ if __name__ == '__main__':
 
     # Writing the Data into Database (Loading)
     data_push.write_to_mysql_database(updated_data, host, user, password, database, table_name)
+
