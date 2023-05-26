@@ -1,3 +1,37 @@
+import csv
+
+
+def check_csv_columns(csv_file):
+    valid_columns = {
+        'ID': lambda value: value.isdigit(),
+        'Name': lambda value: len(value.strip()) > 0,
+        'Identity': lambda value: len(value.strip()) > 0,
+        'Alignment': lambda value: value in ['Good', 'Bad', 'Neutral'],
+        'EyeColor': lambda value: len(value.strip()) > 0,
+        'HairColor': lambda value: len(value.strip()) > 0,
+        'Gender': lambda value: value in ['Male', 'Female'],
+        'Status': lambda value: value in ['Living', 'Deceased'],
+        'Appearances': lambda value: value.isdigit(),
+        'FirstAppearance': lambda value: len(value.strip()) > 0,
+        'Year': lambda value: value.isdigit(),
+        'Universe': lambda value: len(value.strip()) > 0
+    }
+
+    invalid_columns = []
+    with open(csv_file, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            for column, value in row.items():
+                validator = valid_columns.get(column)
+                if validator is not None and not validator(value):
+                    invalid_columns.append(column)
+
+    if invalid_columns:
+        return False, set(invalid_columns)
+    else:
+        return True, None
+
+
 def check_duplicates(data):
     unique_rows = []
     duplicate_rows = []
