@@ -1,0 +1,15 @@
+Missing Values: Check if there are any missing values in the dataset, such as empty cells or NaN values.
+
+Data Types: Validate the data types of each column and ensure they match the expected types (e.g., numeric, string, date).
+
+Column Consistency:Check if all columns have consistent data across rows. For example, verify that the "Alignment" column only contains values like "Good," "Bad," or "Neutral."
+
+Unique Identifiers:Check if the ID column has unique values for each row, ensuring it serves as a proper identifier.
+
+Data Format:Validate the format of specific columns. For example, check if the "EyeColor" and "HairColor" columns contain valid colors.
+
+Range Constraints:Check if numeric columns, such as "Appearances" and "Year," fall within the expected ranges.
+
+Data Consistency:Ensure that related columns are consistent. For example, if the "Status" column indicates a character is deceased, verify that their "Living" column value is "Deceased" or a similar indication.
+
+Value Constraints:Apply constraints specific to each column. For instance, check if "FirstAppearance" follows a specific date format or if "Universe" contains valid universe names.

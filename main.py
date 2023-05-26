@@ -7,7 +7,7 @@ csv_file_path = 'data.csv'  # Replace with the actual path to your CSV file
 output_db_file = 'output/cleaned_data.db'  # Replace with the desired output database file path
 host = 'localhost'  # Replace with the MySQL host
 user = 'root'  # Replace with your MySQL username
-password = 'Mysql@2023'  # Replace with your MySQL password
+password = 'MySql@2023'  # Replace with your MySQL password
 database = 'learning'  # Replace with your MySQL database name
 table_name = 'cleaned_data'  # Replace with the desired table name
 
