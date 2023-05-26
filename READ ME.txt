@@ -1,3 +1,5 @@
+Data Quality Check Matrix:
+
 Missing Values: Check if there are any missing values in the dataset, such as empty cells or NaN values.
 
 Data Types: Validate the data types of each column and ensure they match the expected types (e.g., numeric, string, date).
